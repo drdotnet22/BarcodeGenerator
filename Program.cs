@@ -25,10 +25,11 @@ namespace BarcodeGenerator
 
             //Create a new PDF document.
             PdfDocument document = new PdfDocument();
-            document.PageSettings.Size = PdfPageSize.A6;
+            document.PageSettings.Size = new Syncfusion.Drawing.Size(288, 432);
+            document.PageSettings.Orientation = PdfPageOrientation.Landscape;
+            document.PageSettings.Margins.All = 18;
             //Add a page to the document.
             PdfPage page = document.Pages.Add();
-            page.Rotation = PdfPageRotateAngle.RotateAngle90;
             //Create PDF graphics for the page.
             PdfGraphics graphics = page.Graphics;
             //Set the standard font.
